@@ -1,0 +1,219 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: navajowhite;
+}
+.header{
+    background-color: gainsboro;
+    padding: 5px;
+    border-radius: 55px;
+}
+.title h1{
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    color: crimson;
+}
+.horizontal{
+    margin: 0;
+}
+.horizontal li{
+    display:inline-block;
+    font-size: 25px;
+    position: relative;
+    margin: 15px;
+    padding: 15px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+/*.horizontal li .drop{
+    display: none;
+    color: khaki;
+}
+.horizontal li:hover ul{
+    display:inline-block;
+    position: absolute;
+    width: 500px;
+    margin-left: -50px;
+    margin-top: 10px;
+}*/
+.horizontal li:hover{
+    background-color: dimgrey;
+}
+.horizontal a{
+    text-decoration: none;
+    color: darkslateblue;
+    display: block;
+}
+.horizontal li:hover a{
+    color: white;
+}
+.image img{
+    max-width: 99.99%;
+    
+}
+.horizontal .active{
+    background-color: lightcoral;
+} 
+.form{
+    margin:10px;
+}
+.form label{
+    display: block;
+    font-family: sans-serif;
+    padding: 9px;
+    margin: 5px;
+    font-size: 35px;
+    color:black;
+}
+.form .in{
+    border-radius: 305px;
+    border: 0;
+    padding: 5px;
+    font-size: 25px;
+    height: 30px;
+    width: 500px;
+    margin-left:150px;
+    outline: 0;
+}
+ .form .btn{
+    background-color: paleturquoise;
+    color:black;
+    width: 150px;
+    font-size: 30px;
+    outline: 0;
+    border-radius: 20px;
+    border: 2px solid brown;
+    height: 45px;
+    padding: 5px;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+.div1{
+    background-image: url('./../image/mouse.jpg');
+    background-repeat: no-repeat;
+    background-size: 99.99%;
+    opacity: 0.7;
+    padding:20px
+}
+.form .int{
+    border-radius: 305px;
+    border: 0;
+    padding: 5px;
+    font-size: 25px;
+    height: 30px;
+    width: 500px;
+    margin-left:40px;
+    outline: 0;
+}
+.login{
+    /*background-color: cornflowerblue;*/
+    display: inline-block;
+    position: relative;
+    border: 2px solid blue;
+    border-radius: 15px;
+    left: 90px;
+    top: 30px;
+    /*float: left;*/
+}
+.register{
+   /* background-color: darkgreen;*/
+    display: inline-block;
+    position: relative;
+    left: 75px;
+    border-radius: 15px;
+    border: 2px solid blue;
+    top: 30px;
+    /*float: right;*/
+}
+.container{
+    position: relative;
+}
+.login .form1 label{
+    display: block;
+    font-family: sans-serif;
+    padding: 49px;
+    margin: 5px;
+    font-size: 35px;
+    color:black;
+}
+.login .form1 .test{
+    border-radius: 305px;
+    border: 0;
+    padding: 5px;
+    font-size: 20px;
+    height: 30px;
+    width: 300px;
+    margin:10px;
+    outline: 0;
+}
+.register .form2 label{
+    display: block;
+    font-family: sans-serif;
+    padding: 22px;
+    margin: 5px;
+    font-size: 35px;
+    color:black;
+}
+.register .form2 .test{
+    border-radius: 305px;
+    border: 0;
+    padding: 5px;
+    font-size: 20px;
+    height: 30px;
+    width: 300px;
+    margin:10px;
+    outline: 0;
+}
+.login .form1 .btn{
+    background-color: paleturquoise;
+    color:black;
+    width: 150px;
+    font-size: 30px;
+    outline: 0;
+    position: relative;
+    bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid brown;
+    height: 45px;
+    margin-left: 35%;
+    margin-top: 5px;
+}
+.register .form2 .btn{
+    background-color: paleturquoise;
+    color:black;
+    width: 150px;
+    position: relative;
+    bottom: 20px;
+    font-size: 30px;
+    outline: 0;
+    border-radius: 10px;
+    border: 1px solid brown;
+    height: 45px;
+    margin-left: 35%;
+    margin-top: 5px;
+}
+.info{
+    text-align: center;
+    color: gray;
+}
+.center{
+    text-align: center;
+    font-size: x-large;
+    color: dodgerblue;
+    padding: 0;
+    margin: 0;
+}
+.question{
+    text-align: center;
+    background-color:whitesmoke;
+    border: 3px solid tomato;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: cornflowerblue;
+}
