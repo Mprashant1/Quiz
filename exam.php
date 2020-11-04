@@ -5,7 +5,7 @@
 ?>
             <div class="nav">
                     <ul class="horizontal">
-                        <li><a href="xml.php?v=XML">XML</a></li>
+                        <li><a href="xml.php?v=XML&n=0">XML</a></li>
                         <li><a href="php.php?v=PHP">PHP</a></li>
                         <li><a href="html.php?v=HTML">HTML</a></li>   
                     </ul>

@@ -13,8 +13,7 @@
             <p>
                 <?php 
                         $collect=QuestionXML();
-                   
-                    //echo '<a href="xml.php?">'
+                        //echo '<a href="xml.php?">'
                 ?>
             </p>
         </div>

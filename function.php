@@ -51,37 +51,135 @@
     }
     function QuestionXML(){
         global $conn;
-        if(isset($_GET['v'])){
-            $value=$_GET['v'];
+        if(isset($_GET['n'])){
+            $i=$_GET['n'];
         }else{
-            $value=" ";
+            $i=0;
         }
-        $sql = "SELECT * FROM ques_type where quetype='$value'limit $offset,1";
-        $result = $conn->query($sql);
+        echo $i;
+            $sql = "SELECT * FROM ques_type where quetype='XML'limit $i,1";
+            $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            $q=$row['quetion_id'];
-            $sq = "SELECT question FROM questions where que_id='$q'";
-            $res = $conn->query($sq);
+            if ($result->num_rows > 0) {
+                 // output data of each row
+                 while($row = $result->fetch_assoc()) {
+                    $q=$row['quetion_id'];
+                    $sq = "SELECT question FROM questions where que_id='$q'";
+                    $res = $conn->query($sq);
 
-            if ($res->num_rows > 0) {
-            // output data of each row
-            while($row = $res->fetch_assoc()) {
-                echo "Question : ".$row['question'].  "<br>";
-            }
+                    if ($res->num_rows > 0) {
+                        // output data of each row
+                        while($row = $res->fetch_assoc()) {
+                            echo "Question : ".htmlspecialchars($row['question']).  "<br>";
+                            $sql = "SELECT ans FROM answer where ques_id='$q'";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo htmlspecialchars($row['ans'])."<br>";
+                            }
+                            } else {
+                            echo "0 results";
+                            }
+                        }
+                    } else {
+                    echo "0 results";}
+                }
             } else {
-            echo "0 results";
+                echo "0 results";
             }
-        }
-        } else {
-        echo "0 results";
-        }
+            echo '<a href="xml.php?n='.($i+1).'">Next</a>';
         $conn->close();
-        return $value;
     }
-    function AnswerXML($call){
-        echo $call;
+    function QuestionPHP(){
+        global $conn;
+        if(isset($_GET['n'])){
+            $i=$_GET['n'];
+        }else{
+            $i=0;
+        }
+        echo $i;
+            $sql = "SELECT * FROM ques_type where quetype='PHP'limit $i,1";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                 // output data of each row
+                 while($row = $result->fetch_assoc()) {
+                    $q=$row['quetion_id'];
+                    $sq = "SELECT question FROM questions where que_id='$q'";
+                    $res = $conn->query($sq);
+
+                    if ($res->num_rows > 0) {
+                        // output data of each row
+                        while($row = $res->fetch_assoc()) {
+                            echo "Question : ".htmlspecialchars($row['question']).  "<br>";
+                            $sql = "SELECT ans FROM answer where ques_id='$q'";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo htmlspecialchars($row['ans'])."<br>";
+                            }
+                            } else {
+                            echo "0 results";
+                            }
+                        }
+                    } else {
+                    echo "0 results";}
+                }
+            } else {
+                echo "0 results";
+            }
+            echo '<a href="php.php?n='.($i+1).'">Next</a>';
+        $conn->close();
+    }
+    function QuestionHTML(){
+        global $conn;
+        if(isset($_GET['n'])){
+            $i=$_GET['n'];
+        }else{
+            $i=0;
+        }
+        echo $i;
+            $sql = "SELECT * FROM ques_type where quetype='HTML'limit $i,1";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                 // output data of each row
+                 while($row = $result->fetch_assoc()) {
+                    $q=$row['quetion_id'];
+                    $sq = "SELECT question FROM questions where que_id='$q'";
+                    $res = $conn->query($sq);
+
+                    if ($res->num_rows > 0) {
+                        // output data of each row
+                        while($row = $res->fetch_assoc()) {
+                            echo "Question : ".htmlspecialchars($row['question']).  "<br>";
+                            $sql = "SELECT * FROM answer where ques_id='$q'";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo '<div class="answer"><input type="radio" name="answer" value="<?php echo $row["ans_id"];?>'.htmlspecialchars($row['ans']).'</div><br>';
+                            }
+                            } else {
+                            echo "0 results";
+                            }
+                                                        
+                        }
+                    } else {
+                    echo "0 results";}
+                }
+            } else {
+                echo "0 results";
+            }
+            echo '<a href="html.php?n='.($i+1).'">Next</a>';
+        $conn->close();
+    }
+    function AnswerXML(){
+        //echo $call;
     }
 ?>

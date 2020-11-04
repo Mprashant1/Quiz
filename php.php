@@ -12,11 +12,11 @@
         <div class="question">
             <p>
                 <?php 
-                    $collect=QuestionXML();
+                    QuestionPHP();
                 ?>
             </p>
         </div>
-        <?php AnswerXML($collect);?>
+        <?php AnswerXML();?>
     </div>
 </body>
 </html>
